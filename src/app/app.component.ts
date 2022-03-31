@@ -8,13 +8,7 @@ import { Empleado } from './empleado.model';
 })
 export class AppComponent {
   titulo = 'Listado de Empelados';
-  empleados: Empleado [] = [
-
-    new Empleado("Martin","Pastorino","Presidente", 7500),
-    new Empleado("Ana","Planeta","Secretaria", 3000),
-    new Empleado("Jimena","Hicieron","Emperatriz", 10000),
-    new Empleado("David","River","Rey", 5000),
-  ];
+  empleados: Empleado [] = [];
   
   cuadroNombre:string = "";
   cuadroApellido:string = "";
