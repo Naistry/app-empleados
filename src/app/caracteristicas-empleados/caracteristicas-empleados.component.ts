@@ -7,14 +7,7 @@ import { ServicioEmpleadosService } from '../servicio-empleados.service';
   styleUrls: ['./caracteristicas-empleados.component.css']
 })
 export class CaracteristicasEmpleadosComponent implements OnInit {
-  @Output() caracteristicasEmpleado = new EventEmitter<string>();
-
-  agregaCaracteristicas(value: string) {
-    this.miServicio.muestraMensaje("Se agrego caracteristica: "+ value);
-    this.caracteristicasEmpleado.emit(value);
-  }
-  constructor(private miServicio:ServicioEmpleadosService) { }
-
+ 
   ngOnInit(): void {
   }
 

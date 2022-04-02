@@ -7,16 +7,7 @@ import { Empleado } from '../empleado.model';
   styleUrls: ['./empleado-hijo.component.css']
 })
 export class EmpleadoHijoComponent implements OnInit {
-  @Input() empleadoLista: Empleado;
-
-  @Input() indice:number;
-
-  caracteristicasList= [''];
-
-  agregarCaracteristica(nuevaCaracteristica: string) {
-    this.caracteristicasList.push(nuevaCaracteristica);
-  }
-  constructor() { }
+  
 
   ngOnInit(): void {
   }
