@@ -42,18 +42,21 @@
       <div class="row">
           <div class="col">
               <div *ngFor="let empleado of empleados; let i=index">
+                <a [routerLink]="['/actualizar',i]">
                 {{i+1}}: {{empleado.nombre}} {{empleado.apellido}} {{empleado.cargo}} {{empleado.salario}}
-                
+              </a>
+
+                <ul style="list-style:none">
+                  <li *ngFor="let caracteristica of caracteristicasList">{{caracteristica}}</li>
+                </ul>
+              <div>
+              <label>Caracteristica: </label>
+              <input type="text"  #nuevaCaracteristica>
+              <button type="button" (click)="agregarCaracteristica(nuevaCaracteristica.value)" class="btn btn-primary">Añadir Característica</button>
+              </div>
               </div>
             
-              <ul style="list-style:none">
-                <li *ngFor="let caracteristica of caracteristicasList">{{caracteristica}}</li>
-              </ul>
-            <div>
-            <label>Caracteristica: </label>
-            <input type="text"  #nuevaCaracteristica>
-            <button type="button" (click)="agregarCaracteristica(nuevaCaracteristica.value)" class="btn btn-primary">Añadir Característica</button>
-            </div>
+              
       </div>
     </div>
   </div>

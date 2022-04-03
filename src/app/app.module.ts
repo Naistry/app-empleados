@@ -11,13 +11,15 @@ import { ProyectosComponentComponent } from './proyectos-component/proyectos-com
 import { QuienComponentComponent } from './quien-component/quien-component.component';
 import { ContactoComponentComponent } from './contacto-component/contacto-component.component';
 import { RouterModule, Routes } from '@angular/router';
+import { ActualizarComponentComponent } from './actualizar-component/actualizar-component.component';
 
 const appRoutes:Routes = [
 
   {path:'', component:HomeComponentComponent},
   {path:'proyectos', component:ProyectosComponentComponent},
   {path:'quienes', component:QuienComponentComponent},
-  {path:'contacto', component:ContactoComponentComponent}
+  {path:'contacto', component:ContactoComponentComponent},
+  {path:'actualizar/:id', component:ActualizarComponentComponent}
 ];
 
 @NgModule({
@@ -28,7 +30,8 @@ const appRoutes:Routes = [
     HomeComponentComponent,
     ProyectosComponentComponent,
     QuienComponentComponent,
-    ContactoComponentComponent
+    ContactoComponentComponent,
+    ActualizarComponentComponent
   ],
   imports: [
     BrowserModule,
