@@ -42,9 +42,13 @@
       <div class="row">
           <div class="col">
               <div *ngFor="let empleado of empleados; let i=index">
-                <a [routerLink]="['/actualizar',i]">
                 {{i+1}}: {{empleado.nombre}} {{empleado.apellido}} {{empleado.cargo}} {{empleado.salario}}
-              </a>
+                <a [routerLink]="['/actualizar',i]" [queryParams]="{accion:'1'}">
+                  Actualizar
+                </a>
+                <a [routerLink]="['/actualizar',i]" [queryParams]="{accion:'2'}">
+                  Eliminar
+                </a>
 
                 <ul style="list-style:none">
                   <li *ngFor="let caracteristica of caracteristicasList">{{caracteristica}}</li>

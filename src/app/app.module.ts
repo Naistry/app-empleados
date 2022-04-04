@@ -12,6 +12,7 @@ import { QuienComponentComponent } from './quien-component/quien-component.compo
 import { ContactoComponentComponent } from './contacto-component/contacto-component.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ActualizarComponentComponent } from './actualizar-component/actualizar-component.component';
+import { ErrorPersonalizadoComponent } from './error-personalizado/error-personalizado.component';
 
 const appRoutes:Routes = [
 
@@ -19,7 +20,8 @@ const appRoutes:Routes = [
   {path:'proyectos', component:ProyectosComponentComponent},
   {path:'quienes', component:QuienComponentComponent},
   {path:'contacto', component:ContactoComponentComponent},
-  {path:'actualizar/:id', component:ActualizarComponentComponent}
+  {path:'actualizar/:id', component:ActualizarComponentComponent},
+  {path:'**',component:ErrorPersonalizadoComponent}
 ];
 
 @NgModule({
