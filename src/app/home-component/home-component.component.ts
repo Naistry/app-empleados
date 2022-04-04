@@ -23,7 +23,11 @@ export class HomeComponentComponent implements OnInit {
     //this.empleados = this.empleadosService.empleados;
   }
   ngOnInit(): void {
-    this.empleados = this.empleadosService.empleados; 
+    //this.empleados = this.empleadosService.empleados;
+    
+    this.empleadosService.obtenerEmpleados().subscribe(misEmpleados=>{
+      console.log(misEmpleados);
+    });
   }
   
   agregarEmpleado(){
